@@ -8,6 +8,28 @@ body {
    display: flex;
    align-items: center;
 }
+
+.start {
+   position: absolute;
+   background: linear-gradient(#87ceeb, #e0f6ff);
+   border-bottom: 15px solid rgb(6, 106, 7);
+   width: 800px;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   gap: 30px;
+}
+
+.start p:first-child {
+   font-size: 2rem;
+}
+
+.start p:last-child {
+   font-size: 1.4rem;
+}
+
 .game-board {
    background: linear-gradient(#87ceeb, #e0f6ff);
    border-bottom: 15px solid rgb(6, 106, 7);
@@ -23,20 +45,19 @@ body {
    position: absolute;
    bottom: -20px;
    width: 80px;
-   animation: pipe-animation 1.3s infinite linear;
 }
 
 .mario {
    width: 150px;
    position: absolute;
    bottom: 0;
+   display: none;
 }
 
 .clouds {
    position: absolute;
    width: 450px;
    top: 30px;
-   animation: clouds-animation 20s infinite linear;
 }
 
 .jump {
