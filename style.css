@@ -3,11 +3,17 @@
    padding: 0;
    box-sizing: border-box;
 }
-
+body {
+   height: 100vh;
+   display: flex;
+   align-items: center;
+}
 .game-board {
-   width: 80%;
+   background: linear-gradient(#87ceeb, #e0f6ff);
+   border-bottom: 15px solid rgb(6, 106, 7);
+   width: 800px;
    height: 500px;
-   border: 1px solid #333;
+   outline: 2px solid #333;
    margin: 0 auto;
    position: relative;
    overflow: hidden;
@@ -17,13 +23,20 @@
    position: absolute;
    bottom: -20px;
    width: 80px;
-   animation: pipe-animation 4s infinite linear;
+   animation: pipe-animation 1.3s infinite linear;
 }
 
 .mario {
    width: 150px;
    position: absolute;
    bottom: 0;
+}
+
+.clouds {
+   position: absolute;
+   width: 450px;
+   top: 30px;
+   animation: clouds-animation 20s infinite linear;
 }
 
 .jump {
@@ -51,5 +64,14 @@
    }
    100% {
       bottom: 0;
+   }
+}
+
+@keyframes clouds-animation {
+   from {
+      right: -450px;
+   }
+   to {
+      right: 100%;
    }
 }
